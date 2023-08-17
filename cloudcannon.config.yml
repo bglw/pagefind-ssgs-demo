@@ -59,7 +59,12 @@ _snippets:
     template: eleventy_nunjucks_shortcode_positional_args
     inline: false
     preview:
-      text: Custom Image
+      icon: add_photo_alternate
+      text: 
+        - key: image
+        - "Image"
+      subtext:
+        - key: alt_text
     definitions:
       shortcode_name: image
       positional_args:
