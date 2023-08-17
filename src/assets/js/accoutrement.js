@@ -79,7 +79,9 @@ class Emoji {
   const new_emoji = () => {
     let w = window.innerWidth;
     let h = window.innerHeight;
-    emojis.push(new Emoji(emoji, Math.random() * w, Math.random() * 500));
+    if (document.hasFocus()) {
+      emojis.push(new Emoji(emoji, Math.random() * w, Math.random() * 500));
+    }
 
     if (emojis.length) {
       for (let i = emojis.length - 1; i >= 0; i -= 1) {
