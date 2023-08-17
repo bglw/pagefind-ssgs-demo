@@ -11,6 +11,9 @@ collections_config:
     path: ssg
     output: true
 
+paths:
+  uploads: src/assets/images
+
 _snippets_imports:
   eleventy_nunjucks: true
 
