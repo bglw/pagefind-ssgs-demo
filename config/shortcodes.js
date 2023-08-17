@@ -23,7 +23,7 @@ const removeCommonIndentation = (content) => {
 const eraHeadingShortCode = (eraTitle) => {
   return `<div class="eraHead">
   <span class="gutterIcon" data-emoji="🌟"></span>
-<h2>${eraTitle}</h2>
+<h2 id="${eraTitle.toLowerCase().replace(/[^a-z]/g, "-")}">${eraTitle}</h2>
 </div>`;
 };
 
@@ -53,19 +53,18 @@ function addImageShortcode(eleventyConfig) {
   eleventyConfig.addShortcode("image", async function (src, alt, sizes) {
     let metadata = await Image(src, {
       widths: [300, 600],
-      formats: ["avif", "jpeg"],
+      formats: ["png"],
       outputDir: "./_site/img/",
     });
 
-    let imageAttributes = {
-      alt,
-      sizes,
-      loading: "lazy",
-      decoding: "async",
-    };
-
-    // You bet we throw an error on a missing alt (alt="" works okay)
-    return Image.generateHTML(metadata, imageAttributes);
+    let data = metadata.png[metadata.png.length - 1];
+    return `<img 
+      src="${data.url}"
+      width="${data.width}"
+      height="${data.height}"
+      alt="${alt}"
+      loading="lazy"
+      decoding="async">`;
   });
 }
 
