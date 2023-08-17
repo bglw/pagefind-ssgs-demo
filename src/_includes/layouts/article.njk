@@ -1,0 +1,20 @@
+---
+layout: page
+---
+
+<article class="article" data-ssg-emoji="{{ emoji }}">
+  <h1>{{ title }}</h1>
+  <small>
+    Released 
+    <time>{{ date | readableDate }}</time>,
+    in the
+    <span class="era">{{ era }}</span>
+    Era
+  </small>
+
+  <div class="lead">
+    {{ lead | markdownify | safe }}
+  </div>
+
+  {{ content | safe }}
+</article>

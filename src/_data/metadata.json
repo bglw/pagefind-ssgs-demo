@@ -1,0 +1,12 @@
+{
+  "title": "SSG Timeline",
+  "url": "https://cloudcannon.com",
+  "language": "en",
+  "description": "A timeline of SSGs through the ages.",
+  "author": {
+    "name": "Liam Bigelow",
+    "email": "liam@cloudcannon.com"
+  },
+  "image": "/assets/explorer.png",
+  "feedUrl": "https://cloudcannon.com/feed.xml"
+}

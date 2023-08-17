@@ -1,0 +1,17 @@
+<li class="article__item">
+  <article class="article__preview">
+    <small>
+      <span class="gutterIcon" data-emoji="{{ article.data.emoji | default('🛠️') }}"></span>
+      <time>{{ article.data.date | readableDate }}</time>,
+      in the
+      <span class="era">{{ article.data.era }}</span>
+      Era
+    </small>
+    <div class="ssgItem">
+      <h2>
+        <a href="{{ article.url | url }}">{{ article.data.title }}</a>
+      </h2>
+      <p>{{ article.data.lead }}</p>
+    </div>
+  </article>
+</li>

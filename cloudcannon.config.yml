@@ -1,0 +1,66 @@
+collections_config:
+  home:
+    path: .
+    output: true
+    filter:
+      base: none
+      include:
+        - index.md
+        - timeline.md
+  ssgs:
+    path: ssg
+    output: true
+
+_snippets_imports:
+  eleventy_nunjucks: true
+
+_snippets:
+  era_heading:
+    template: eleventy_nunjucks_shortcode_positional_args
+    inline: false
+    preview:
+      text: Era Heading
+      subtext:
+        - key: heading
+    definitions:
+      shortcode_name: eraHeading
+      positional_args:
+        - editor_key: heading
+          type: string
+  era_ssgs:
+    template: eleventy_nunjucks_shortcode_positional_args
+    inline: false
+    preview:
+      text: List Era SSGs
+      subtext:
+        - key: era
+    definitions:
+      shortcode_name: eraSsgs
+      positional_args:
+        - editor_key: era
+          type: string
+    _inputs:
+      era:
+        type: select
+        options:
+          values:
+            - Before Jekyll
+            - After Jekyll
+            - Reinvention
+            - SPAs are awesome
+            - Maybe Static Wasn't So Bad
+            - Let's Recreate Rails
+            - Rebirth
+            - Islands
+  eleventy_img:
+    template: eleventy_nunjucks_shortcode_positional_args
+    inline: false
+    preview:
+      text: Custom Image
+    definitions:
+      shortcode_name: image
+      positional_args:
+        - editor_key: image
+          type: string
+        - editor_key: alt_text
+          type: string

@@ -1,0 +1,18 @@
+$main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$accent-font: $main-font;
+
+/* Colours */
+$light-shade: #FFFFFF;
+$dark-shade: #444444;
+$darkest-shade: darken($dark-shade, 17%);
+$accent-shade:#E74775;
+
+/*========================================*/
+
+$base-clr: $darkest-shade;
+$bg-clr: lighten($light-shade, 7%);
+$link-clr: $darkest-shade;
+$link-hvr-clr: $accent-shade;
+$cat-clr: $darkest-shade;
+
+
