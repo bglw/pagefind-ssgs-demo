@@ -12,7 +12,7 @@ collections_config:
     output: true
 
 paths:
-  uploads: src/assets/images
+  uploads: assets/images
 
 _snippets_imports:
   eleventy_nunjucks: true
